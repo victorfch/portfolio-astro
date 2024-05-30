@@ -1,10 +1,8 @@
 <header
-  class="flex justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
+  class="flex z-10 justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
 >
-  <nav>
-    <ul
-      class="flex flex-row gap-x-10 opacity-90 bg-white/5 p-3 rounded-xl font-bold"
-    >
+  <nav class="fixed top-3 rounded-full opacity-90">
+    <ul class="flex flex-row gap-x-10 p-3 font-bold">
       <li class="hover:text-yellow-200"><a href="#top">Inicio</a></li>
       <li class="hover:text-yellow-200"><a href="#about">Sobre mí</a></li>
       <li class="hover:text-yellow-200">
@@ -14,3 +12,17 @@
     </ul>
   </nav>
 </header>
+
+<style>
+  nav {
+    animation: appear auto linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 200px;
+  }
+  @keyframes appear {
+    to {
+      backdrop-filter: blur(5px);
+      background-color: rgb(255 255 255 / 0.5);
+    }
+  }
+</style>

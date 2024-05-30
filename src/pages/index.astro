@@ -6,6 +6,8 @@ import GithubIcon from "../icons/Github.astro";
 import MailIcon from "../icons/Mail.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Code from "../icons/Code.astro";
+import CV from "../icons/CV.astro";
+import Tool from "../icons/Tool.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
@@ -15,10 +17,10 @@ import Projects from "../components/Projects.astro";
   title="Portfolio de Víctor - Programador y Desarrollador Web."
   description="Contrata a Víctor para crear tu aplicación web"
 >
-  <main class="px-4">
+  <main class="px-4 mb-10">
     <section class="w-full lg:w-[740px] mx-auto py-44 pb-24" id="top">
       <img
-        class="rounded-full w-12 h-12 mb-4"
+        class="rounded-full size-24 mb-4"
         src="https://media.licdn.com/dms/image/C4D03AQE65g2ZizghFw/profile-displayphoto-shrink_200_200/0/1638887769442?e=1722470400&v=beta&t=ycswnUKMOC4DLo0AJvFBxu1KNqurXqMGdRPpGViViFU"
         alt="Photo portfolio"
       />
@@ -79,10 +81,57 @@ import Projects from "../components/Projects.astro";
     </section>
     <section class="w-full lg:w-[740px] mx-auto" id="projects">
       <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
-        <Code class="size-8" />
-        Datos académicos
+        <Tool class="size-8" />
+        Habilidades
       </h2>
-      <Projects />
+
+      <ul class="flex flex-wrap items-center gap-4">
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          Java
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          Spring
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          HTML
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          CSS
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          Javascript
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          React
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          Git
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          Redux
+        </li>
+        <li
+          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
+        >
+          Docker
+        </li>
+      </ul>
     </section>
   </main>
 </Layout>
