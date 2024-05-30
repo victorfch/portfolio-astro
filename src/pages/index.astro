@@ -1,0 +1,88 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/Github.astro";
+import MailIcon from "../icons/Mail.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import Code from "../icons/Code.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="Portfolio de Víctor - Programador y Desarrollador Web."
+  description="Contrata a Víctor para crear tu aplicación web"
+>
+  <main class="px-4">
+    <section class="w-full lg:w-[740px] mx-auto py-44 pb-24" id="top">
+      <img
+        class="rounded-full w-12 h-12 mb-4"
+        src="https://media.licdn.com/dms/image/C4D03AQE65g2ZizghFw/profile-displayphoto-shrink_200_200/0/1638887769442?e=1722470400&v=beta&t=ycswnUKMOC4DLo0AJvFBxu1KNqurXqMGdRPpGViViFU"
+        alt="Photo portfolio"
+      />
+      <h1
+        class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, soy Victor <a
+          href="https://www.linkedin.com/in/víctor-manuel-faría-chávez-5a848914b"
+          rel="noopener"
+          target="_blank"
+          class="flex justify-center items-center"
+        >
+          <Badge>Disponible para trabajar</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        +2 años de experiencia. Me encanta el frontend, también tengo
+        conocimientos de backend con Spring y gracias a mi primer ciclo le cogí
+        el gusto a linux y a los servidores.
+      </h2>
+
+      <ul class="flex gap-4 mt-8 flex-wrap">
+        <li>
+          <SocialPill
+            href="https://www.linkedin.com/in/víctor-manuel-faría-chávez-5a848914b"
+          >
+            <LinkedinIcon class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+        </li>
+        <li>
+          <SocialPill href="https://github.com/victorfch">
+            <GithubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+        </li>
+        <li>
+          <SocialPill href="mailto:vfariachavez@gmail.com">
+            <MailIcon class="size-4 md:size-6" />
+            vfariachavez@gmail.com
+          </SocialPill>
+        </li>
+      </ul>
+    </section>
+    <section class="w-full lg:w-[740px] mx-auto" id="experience">
+      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-8" />
+        Experiencia
+      </h2>
+      <Experience />
+    </section>
+    <section class="w-full lg:w-[740px] mx-auto" id="projects">
+      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-8" />
+        Proyectos
+      </h2>
+      <Projects />
+    </section>
+    <section class="w-full lg:w-[740px] mx-auto" id="projects">
+      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Code class="size-8" />
+        Datos académicos
+      </h2>
+      <Projects />
+    </section>
+  </main>
+</Layout>

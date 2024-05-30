@@ -1,0 +1,48 @@
+---
+const EXPERIENCE = [
+  {
+    name: "Sectorea IT",
+    position: "Frontend Developer",
+    startDate: "Marzo 2023",
+    endDate: "Diciembre 2023",
+    summary:
+      "Componentización de web del cliente usando React y WebComponents.\n SCSS para los estilos. \nTrasladar a la web los diseños dados en Figma.",
+  },
+  {
+    name: "Medano Solutions",
+    position: "Frontend Developer",
+    startDate: "Julio 2022",
+    endDate: "Enero 2023",
+    summary:
+      "Desarrollo en React, Next.js, Typescript, SCSS.\n GIT para control de versiones. \nBackend en GraphQL y Express.\nDocker para el entorno",
+  },
+  {
+    name: "Codebay Innovation",
+    position: "Fullstack Developer",
+    startDate: "Junio 2021",
+    endDate: "Julio 2022",
+    summary:
+      "Desarrollo del back en Java.\nAEM 6.5\nFront en HTML, SCSS, JS Vanilla \nGIT para el control de versiones",
+  },
+  {
+    name: "CEDeI ITER",
+    position: "Junior Developer",
+    startDate: "Julio 2017",
+    endDate: "Julio 2018",
+    summary:
+      "Backend usando Java, Spring, Hibernate\n Front en Angular.\nGIT, Bootstrap, MySQL",
+  },
+];
+
+import ExperienceItem from "./ExperienceItem.astro";
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
