@@ -1,0 +1,89 @@
+{
+  "profile": {
+    "image": {
+      "path": "/me.webp",
+      "altText": "Photo portfolio"
+    },
+    "name": "Hey, soy Victor",
+    "badge": "Disponible para trabajar",
+    "description": "+2 años de experiencia. Me encanta el frontend, también tengo conocimientos de backend con Spring y gracias a mi primer ciclo le cogí el gusto a linux y a los servidores.",
+    "networks": [
+      {
+        "text": "LinkedIn",
+        "link": "https://www.linkedin.com/in/víctor-manuel-faría-chávez-5a848914b"
+      },
+      {
+        "text": "GitHub",
+        "link": "https://github.com/victorfch"
+      },
+      {
+        "text": "vfariachavez@gmail.com",
+        "link": "mailto:vfariachavez@gmail.com"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "name": "Sectorea IT",
+      "position": "Frontend Developer",
+      "startDate": "Marzo 2023",
+      "endDate": "Diciembre 2023",
+      "summary":
+        "Componentización de la web del cliente usando React y WebComponents.\n SCSS para los estilos. \nTrasladar a la web los diseños dados en Figma."
+    },
+    {
+      "name": "Medano Solutions",
+      "position": "Frontend Developer",
+      "startDate": "Julio 2022",
+      "endDate": "Enero 2023",
+      "summary":
+        "Desarrollo en React, Next.js, Typescript, SCSS.\n GIT para control de versiones. \nBackend en GraphQL y Express.\nDocker para el entorno"
+    },
+    {
+      "name": "Codebay Innovation",
+      "position": "Fullstack Developer",
+      "startDate": "Junio 2021",
+      "endDate": "Julio 2022",
+      "summary":
+        "Desarrollo del back en Java.\nAEM 6.5\nFront en HTML, SCSS, JS Vanilla \nGIT para el control de versiones"
+    },
+    {
+      "name": "CEDeI ITER",
+      "position": "Junior Developer",
+      "startDate": "Julio 2017",
+      "endDate": "Julio 2018",
+      "summary":
+        "Backend usando Java, Spring, Hibernate\n Front en Angular.\nGIT, Bootstrap, MySQL"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Omnifood",
+      "description": "Web creada en curso de SCSS",
+      "link": "https://omnifood-css-course.netlify.app",
+      "tags": ["HTML", "CSS", "JS"],
+      "image": "/projects/omnifood.webp"
+    },
+    {
+      "title": "Card register",
+      "description":
+        "Un bonito formulario para rellenar la información de la tarjeta",
+      "link": "https://delightful-biscotti.netlify.app/",
+      "tags": ["HTML", "TAILWIND", "ASTRO", "REACT"],
+      "image": "/projects/card-form.webp"
+    }
+  ],
+  "education": [
+    {
+      "institution": "IES LAS GALLETAS",
+      "degree": "Desarrollo de Aplicaciones Web",
+      "years": "2019 - 2021"
+    },
+    {
+      "institution": "IES LAS GALLETAS",
+      "degree": "Administración de Sistemas Informáticos en Red",
+      "years": "2015 - 2017"
+    }
+  ]
+  
+}

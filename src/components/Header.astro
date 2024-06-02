@@ -1,14 +1,28 @@
+---
+import Moon from "../icons/Moon.astro";
+import Sun from "../icons/Sun.astro";
+---
+
 <header
   class="flex z-10 justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
 >
-  <nav class="fixed top-3 rounded-full opacity-90">
-    <ul class="flex flex-row gap-x-10 p-3 font-bold">
-      <li class="hover:text-yellow-200"><a href="#top">Inicio</a></li>
-      <li class="hover:text-yellow-200"><a href="#about">Sobre mí</a></li>
-      <li class="hover:text-yellow-200">
+  <nav
+    class="fixed top-3 rounded-full opacity-90 text-gray-700 dark:text-gray-200"
+  >
+    <ul
+      class="flex flex-row gap-x-5 p-3 font-bold items-center hover:[&>li]:text-yellow-400"
+    >
+      <li><a href="#top">Inicio</a></li>
+      <li><a href="#about">Sobre mí</a></li>
+      <li>
         <a href="#experience">Experiencia</a>
       </li>
-      <li class="hover:text-yellow-200"><a href="#projects">Proyectos</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li>
+        <Moon id="moon" class="size-5 hidden" />
+        <Sun id="sun" class="size-5 hidden" />
+      </li>
     </ul>
   </nav>
 </header>
@@ -26,3 +40,50 @@
     }
   }
 </style>
+
+<script>
+  let actualMode = "light";
+  if (document.documentElement.classList.contains("dark")) {
+    actualMode = "dark";
+  }
+
+  const lastLi = document.querySelector("ul li:last-child");
+  const sunSVG = document.querySelector("#sun");
+  const moonSVG = document.querySelector("#moon");
+
+  if (actualMode == "dark") {
+    moonSVG.classList.remove("hidden");
+  } else {
+    sunSVG.classList.remove("hidden");
+  }
+
+  lastLi.addEventListener("click", () => {
+    actualMode == "dark" ? (actualMode = "light") : (actualMode = "dark");
+
+    if (actualMode == "dark") {
+      moonSVG.classList.remove("hidden");
+      sunSVG.classList.add("hidden");
+    } else {
+      moonSVG.classList.add("hidden");
+      sunSVG.classList.remove("hidden");
+    }
+
+    if (localStorage.getItem("color-theme")) {
+      if (localStorage.getItem("color-theme") === "light") {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("color-theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("color-theme", "light");
+      }
+    } else {
+      if (document.documentElement.classList.contains("dark")) {
+        document.documentElement.classList.remove("dark");
+        localStorage.setItem("color-theme", "light");
+      } else {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("color-theme", "dark");
+      }
+    }
+  });
+</script>

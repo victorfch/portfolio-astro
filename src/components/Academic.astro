@@ -1,0 +1,17 @@
+---
+import { education } from "../../cv.json";
+---
+
+<div>
+  {
+    education.map((edu) => (
+      <div class="mb-2">
+        <div class="flex justify-between mb-1">
+          <h3 class="text-blue-800 dark:text-sky-200/80">{edu.institution}</h3>
+          <div class="text-black/80 dark:text-white">{edu.years}</div>
+        </div>
+        <h4 class="text-yellow-400">{edu.degree}</h4>
+      </div>
+    ))
+  }
+</div>

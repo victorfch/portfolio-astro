@@ -6,11 +6,14 @@ import GithubIcon from "../icons/Github.astro";
 import MailIcon from "../icons/Mail.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Code from "../icons/Code.astro";
-import CV from "../icons/CV.astro";
 import Tool from "../icons/Tool.astro";
 import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import Projects from "../components/Projects.astro";
+import School from "../icons/School.astro";
+import Academic from "../components/Academic.astro";
+import { profile } from "../../cv.json";
+import Skills from "../components/Skills.astro";
 ---
 
 <Layout
@@ -18,31 +21,32 @@ import Projects from "../components/Projects.astro";
   description="Contrata a Víctor para crear tu aplicación web"
 >
   <main class="px-4 mb-10">
-    <section class="w-full lg:w-[740px] mx-auto py-44 pb-24" id="top">
+    <section class="w-full lg:w-[740px] mx-auto mt-40" id="top">
       <img
         class="rounded-full size-24 mb-4"
-        src="https://media.licdn.com/dms/image/C4D03AQE65g2ZizghFw/profile-displayphoto-shrink_200_200/0/1638887769442?e=1722470400&v=beta&t=ycswnUKMOC4DLo0AJvFBxu1KNqurXqMGdRPpGViViFU"
-        alt="Photo portfolio"
+        src={profile.image.path}
+        alt={profile.image.altText}
       />
       <h1
-        class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+        class="text-gray-800 dark:text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
-        Hey, soy Victor <a
+        {profile.name}
+        <a
           href="https://www.linkedin.com/in/víctor-manuel-faría-chávez-5a848914b"
           rel="noopener"
           target="_blank"
           class="flex justify-center items-center"
         >
-          <Badge>Disponible para trabajar</Badge>
+          <Badge>{profile.badge}</Badge>
         </a>
       </h1>
-      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-        +2 años de experiencia. Me encanta el frontend, también tengo
-        conocimientos de backend con Spring y gracias a mi primer ciclo le cogí
-        el gusto a linux y a los servidores.
+      <h2
+        class="text-xl lg:text-2xl text-gray-800 dark:text-white opacity-80 text-wrap max-w-[700px]"
+      >
+        {profile.description}
       </h2>
 
-      <ul class="flex gap-4 mt-8 flex-wrap">
+      <ul class="flex gap-4 mt-8 flex-wrap text-black/80 dark:text-white">
         <li>
           <SocialPill
             href="https://www.linkedin.com/in/víctor-manuel-faría-chávez-5a848914b"
@@ -65,73 +69,43 @@ import Projects from "../components/Projects.astro";
         </li>
       </ul>
     </section>
-    <section class="w-full lg:w-[740px] mx-auto" id="experience">
-      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+    <section class="w-full lg:w-[740px] mx-auto mt-24" id="experience">
+      <h2
+        class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
+      >
         <Briefcase class="size-8" />
         Experiencia
       </h2>
       <Experience />
     </section>
-    <section class="w-full lg:w-[740px] mx-auto" id="projects">
-      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+    <section class="w-full lg:w-[740px] mx-auto mt-24" id="projects">
+      <h2
+        class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
+      >
         <Code class="size-8" />
         Proyectos
       </h2>
       <Projects />
     </section>
-    <section class="w-full lg:w-[740px] mx-auto" id="projects">
-      <h2 class="text-4xl font-semibold mb-6 flex gap-x-3 items-center">
+    <section class="w-full lg:w-[740px] mx-auto mt-24" id="skills">
+      <h2
+        class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
+      >
         <Tool class="size-8" />
         Habilidades
       </h2>
 
-      <ul class="flex flex-wrap items-center gap-4">
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          Java
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          Spring
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          HTML
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          CSS
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          Javascript
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          React
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          Git
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          Redux
-        </li>
-        <li
-          class="rounded-3xl px-2 py-1 border border-gray-300 bg-gray-300 text-black"
-        >
-          Docker
-        </li>
-      </ul>
+      <Skills />
+    </section>
+
+    <section class="w-full lg:w-[740px] mx-auto mt-24" id="experience">
+      <h2
+        class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
+      >
+        <School class="size-8" />
+        Educación
+      </h2>
+      <Academic />
     </section>
   </main>
 </Layout>
