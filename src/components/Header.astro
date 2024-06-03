@@ -20,7 +20,7 @@ import Sun from "../icons/Sun.astro";
       </li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#edu">Educación</a></li>
-      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#languages">Idiomas</a></li>
       <li>
         <Moon id="moon" class="size-5 hidden" />
         <Sun id="sun" class="size-5 hidden" />
@@ -60,12 +60,23 @@ import Sun from "../icons/Sun.astro";
   const lastLi = document.querySelector("ul li:last-child");
   const sunSVG = document.querySelector("#sun");
   const moonSVG = document.querySelector("#moon");
+  const navbar = document.querySelector("#navbar");
+  const btnHam = document.querySelector("#btn-ham");
+  const icon = btnHam.querySelector("div");
 
   if (actualMode == "dark") {
     moonSVG.classList.remove("hidden");
   } else {
     sunSVG.classList.remove("hidden");
   }
+
+  document.querySelectorAll("nav ul li").forEach((li) => {
+    li.addEventListener("click", () => {
+      document.body.classList.remove("overflow-y-hidden");
+      icon.classList.remove("is-open");
+      navbar.classList.remove("is-open");
+    });
+  });
 
   lastLi.addEventListener("click", () => {
     actualMode == "dark" ? (actualMode = "light") : (actualMode = "dark");
@@ -96,10 +107,6 @@ import Sun from "../icons/Sun.astro";
       }
     }
   });
-
-  const navbar = document.querySelector("#navbar");
-  const btnHam = document.querySelector("#btn-ham");
-  const icon = btnHam.querySelector("div");
 
   btnHam.addEventListener("click", () => {
     document.body.classList.toggle("overflow-y-hidden");

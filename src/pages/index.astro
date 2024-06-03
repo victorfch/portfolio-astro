@@ -16,6 +16,8 @@ import { profile } from "../../cv.json";
 import Skills from "../components/Skills.astro";
 import Language from "../icons/Language.astro";
 import Languages from "../components/Languages.astro";
+import Certificate from "../icons/Certificate.astro";
+import Certifications from "../components/Certifications.astro";
 ---
 
 <Layout
@@ -104,21 +106,31 @@ import Languages from "../components/Languages.astro";
       <h2
         class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
       >
-        <Tool class="size-8" />
-        Habilidades
-      </h2>
-
-      <Skills />
-    </section>
-    <section class="w-full lg:w-[740px] mx-auto mt-12 md:mt-24" id="skills">
-      <h2
-        class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
-      >
         <Language class="size-8" />
         Idiomas
       </h2>
 
       <Languages />
+    </section>
+    <section class="w-full lg:w-[740px] mx-auto mt-12 md:mt-24" id="cert">
+      <h2
+        class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
+      >
+        <Certificate class="size-8" />
+        Certificaciones
+      </h2>
+
+      <Certifications />
+    </section>
+    <section class="w-full lg:w-[740px] mx-auto mt-12 md:mt-24" id="languages">
+      <h2
+        class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
+      >
+        <Tool class="size-8" />
+        Habilidades
+      </h2>
+
+      <Skills />
     </section>
   </main>
 </Layout>

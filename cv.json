@@ -94,6 +94,23 @@
       "language": "Inglés",
       "level": "B2"
     }
+  ],
+  "certifications": [
+    {
+      "title": "Advanced CSS and SASS: Flexbox, Grid, Animations and More",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/certificate/UC-ceb2d077-4468-40b7-ade1-91acba015255/"
+    },
+    {
+      "title": "Build Responsive Real-World Websites with HTML and CSS",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/certificate/UC-0b6aab20-cefe-47c9-8797-1b71fe78ea0f/"
+    },
+    {
+      "title": "React - Guía definitiva",
+      "platform": "Udemy",
+      "link": "https://www.udemy.com/certificate/UC-d8bceb59-7bec-4753-95fb-d76276d7832c/"
+    }
   ]
   
 }
