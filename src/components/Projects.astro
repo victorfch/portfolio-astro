@@ -6,7 +6,9 @@ import { projects } from "../../cv.json";
   projects.map(({ title, description, link, tags, image }) => (
     <article class="mb-4">
       <a href={link} target="_blank">
-        <h3 class="text-2xl font-semibold text-lime-600 mb-2">{title}</h3>
+        <h3 class="text-2xl font-semibold text-cyan-800 dark:text-yellow-400 mb-2">
+          {title}
+        </h3>
         <p class="text-lg mb-4 text-pretty text-black/80 dark:text-white">
           {description}
         </p>

@@ -84,6 +84,16 @@
       "degree": "Administración de Sistemas Informáticos en Red",
       "years": "2015 - 2017"
     }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "level": "Nativo"
+    },
+    {
+      "language": "Inglés",
+      "level": "B2"
+    }
   ]
   
 }

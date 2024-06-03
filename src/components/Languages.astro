@@ -1,0 +1,15 @@
+---
+import { languages } from "../../cv.json";
+---
+
+<div>
+  {
+    languages.map((lan) => (
+      <div class="mb-2">
+        <div class="text-lg text-blue-800 dark:text-sky-200/80">
+          {lan.language} ({lan.level})
+        </div>
+      </div>
+    ))
+  }
+</div>
