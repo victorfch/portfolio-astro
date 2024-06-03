@@ -1,4 +1,5 @@
 ---
+import Hamburger from "../icons/Hamburger.astro";
 import Moon from "../icons/Moon.astro";
 import Sun from "../icons/Sun.astro";
 ---
@@ -7,10 +8,11 @@ import Sun from "../icons/Sun.astro";
   class="flex z-10 justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
 >
   <nav
-    class="fixed top-3 rounded-full opacity-90 text-gray-700 dark:text-gray-200"
+    class="fixed w-full md:w-fit top-0 [backdrop-filter:blur(5px)] bg-white/55 md:bg-transparent animate-none md:animate-appear md:[animation-range:0_200px] md:[animation-timeline:scroll(root)] md:top-3 md:rounded-full opacity-90 text-gray-600 h-0 md:h-max dark:text-gray-800 dark:md:text-white"
+    id="navbar"
   >
     <ul
-      class="flex flex-row gap-x-5 p-3 font-bold items-center hover:[&>li]:text-yellow-400"
+      class="flex flex-col gap-5 absolute md:relative w-full md:w-fit top-1/2 md:top-0 -translate-y-1/2 md:translate-y-0 text-center md:flex-row md:gap-x-5 p-3 font-bold items-center hover:[&>li]:text-cyan-800 dark:hover:[&>li]:text-yellow-400"
     >
       <li><a href="#top">Inicio</a></li>
       <li>
@@ -25,14 +27,22 @@ import Sun from "../icons/Sun.astro";
       </li>
     </ul>
   </nav>
+
+  <button class="fixed md:hidden right-10 top-7" id="btn-ham">
+    <Hamburger />
+  </button>
 </header>
 
 <style>
   nav {
-    animation: appear auto linear both;
-    animation-timeline: scroll(root);
-    animation-range: 0 200px;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
   }
+
+  nav.is-open {
+    height: 100vh;
+  }
+
   @keyframes appear {
     to {
       backdrop-filter: blur(5px);
@@ -84,6 +94,20 @@ import Sun from "../icons/Sun.astro";
         document.documentElement.classList.add("dark");
         localStorage.setItem("color-theme", "dark");
       }
+    }
+  });
+
+  const navbar = document.querySelector("#navbar");
+  const btnHam = document.querySelector("#btn-ham");
+  const icon = btnHam.querySelector("div");
+
+  btnHam.addEventListener("click", () => {
+    document.body.classList.toggle("overflow-y-hidden");
+    icon.classList.toggle("is-open");
+    if (icon.classList.contains("is-open")) {
+      navbar.classList.add("is-open");
+    } else {
+      navbar.classList.remove("is-open");
     }
   });
 </script>

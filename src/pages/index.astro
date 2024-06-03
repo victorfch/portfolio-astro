@@ -21,16 +21,13 @@ import Skills from "../components/Skills.astro";
   description="Contrata a Víctor para crear tu aplicación web"
 >
   <main class="px-4 mb-10">
-    <section class="w-full lg:w-[740px] mx-auto mt-40" id="top">
-      <img
-        class="rounded-full size-24 mb-4"
-        src={profile.image.path}
-        alt={profile.image.altText}
-      />
-      <h1
-        class="text-gray-800 dark:text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
-      >
-        {profile.name}
+    <section class="w-full lg:w-[740px] mx-auto mt-20 lg:mt-40" id="top">
+      <div class="flex flex-row gap-x-6 items-center">
+        <img
+          class="rounded-full size-24 mb-4"
+          src={profile.image.path}
+          alt={profile.image.altText}
+        />
         <a
           href="https://www.linkedin.com/in/víctor-manuel-faría-chávez-5a848914b"
           rel="noopener"
@@ -39,6 +36,11 @@ import Skills from "../components/Skills.astro";
         >
           <Badge>{profile.badge}</Badge>
         </a>
+      </div>
+      <h1
+        class="text-gray-800 dark:text-white text-3xl lg:text-5xl font-bold pb-6 lg:pb-10"
+      >
+        {profile.name}
       </h1>
       <h2
         class="text-xl lg:text-2xl text-gray-800 dark:text-white opacity-80 text-wrap max-w-[700px]"

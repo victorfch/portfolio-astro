@@ -1,0 +1,19 @@
+<div class="[&>div]:transition duration-700">
+  <div class="bg-black dark:bg-white h-1 rounded-sm w-6"></div>
+  <div class="bg-black dark:bg-white h-1 rounded-sm w-6 mt-1"></div>
+  <div class="bg-black dark:bg-white h-1 rounded-sm w-6 mt-1"></div>
+</div>
+
+<style>
+  .is-open > div:first-child {
+    transform: translateY(8px) rotate(135deg);
+  }
+
+  .is-open > div:nth-child(2) {
+    transform: scale(0);
+  }
+
+  .is-open > div:last-child {
+    transform: translateY(-8px) rotate(-135deg);
+  }
+</style>
