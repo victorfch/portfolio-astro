@@ -4,9 +4,9 @@
       "path": "/me.webp",
       "altText": "Photo portfolio"
     },
-    "name": "Hey, soy Victor",
-    "badge": "Disponible para trabajar",
-    "description": "+2 años de experiencia. Me encanta el frontend, también tengo conocimientos de backend con Spring y gracias a mi primer ciclo le cogí el gusto a linux y a los servidores.",
+    "name": "Hey, I'm Victor",
+    "badge": "Open to work",
+    "description": "+2 years of experience. I love frontend, I also have knowledge of backend with Spring and thanks to my first cycle I got a passion for linux and servers.",
     "networks": [
       {
         "text": "LinkedIn",
@@ -26,40 +26,40 @@
     {
       "name": "Sectorea IT",
       "position": "Frontend Developer",
-      "startDate": "Marzo 2023",
-      "endDate": "Diciembre 2023",
+      "startDate": "March 2023",
+      "endDate": "December 2023",
       "summary":
-        "Componentización de la web del cliente usando React y WebComponents.\n SCSS para los estilos. \nTrasladar a la web los diseños dados en Figma."
+        "Componentization of the web client using React and WebComponents.\n SCSS for the styles.\n Porting the designs given in Figma to the web."
     },
     {
       "name": "Medano Solutions",
       "position": "Frontend Developer",
-      "startDate": "Julio 2022",
-      "endDate": "Enero 2023",
+      "startDate": "July 2022",
+      "endDate": "January 2023",
       "summary":
-        "Desarrollo en React, Next.js, Typescript, SCSS.\n GIT para control de versiones. \nBackend en GraphQL y Express.\nDocker para el entorno"
+        "Development in React, Next.js, Typescript, SCSS.\n GIT for version control.\n Backend in GraphQL and Express.\n Docker for the environment."
     },
     {
       "name": "Codebay Innovation",
       "position": "Fullstack Developer",
-      "startDate": "Junio 2021",
-      "endDate": "Julio 2022",
+      "startDate": "June 2021",
+      "endDate": "July 2022",
       "summary":
-        "Desarrollo del back en Java.\n AEM 6.5.\n Front en HTML, SCSS, JS Vanilla.\n GIT para el control de versiones"
+        "Backend development in Java.\n AEM 6.5.\n Frontend in HTML, SCSS, JS Vanilla."
     },
     {
       "name": "CEDeI ITER",
       "position": "Junior Developer",
-      "startDate": "Julio 2017",
-      "endDate": "Julio 2018",
+      "startDate": "July 2017",
+      "endDate": "July 2018",
       "summary":
-        "Backend usando Java, Spring, Hibernate\n Front en Angular.\nGIT, Bootstrap, MySQL"
+        "Backend using Java, Spring, Hibernate.\n Front in Angular.\n GIT, Bootstrap, MySQL"
     }
   ],
   "projects": [
     {
       "title": "Omnifood",
-      "description": "Web creada en curso de SCSS",
+      "description": "Website created in SCSS course",
       "link": "https://omnifood-css-course.netlify.app",
       "tags": ["HTML", "CSS", "JS"],
       "image": "/projects/omnifood.webp"
@@ -67,7 +67,7 @@
     {
       "title": "Card register",
       "description":
-        "Un bonito formulario para rellenar la información de la tarjeta",
+        "A nice form to fill your card information",
       "link": "https://delightful-biscotti.netlify.app/",
       "tags": ["HTML", "TAILWIND", "ASTRO", "REACT"],
       "image": "/projects/card-form.webp"
@@ -75,23 +75,23 @@
   ],
   "education": [
     {
-      "institution": "IES LAS GALLETAS",
-      "degree": "Desarrollo de Aplicaciones Web",
+      "institution": "LAS GALLETAS INSTITUTE",
+      "degree": "Certificate of Higher Education in Web Application Development",
       "years": "2019 - 2021"
     },
     {
-      "institution": "IES LAS GALLETAS",
-      "degree": "Administración de Sistemas Informáticos en Red",
+      "institution": "LAS GALLETAS INSTITUTE",
+      "degree": "Certificate of Higher Education in Sys Admin",
       "years": "2015 - 2017"
     }
   ],
   "languages": [
     {
-      "language": "Español",
-      "level": "Nativo"
+      "language": "Spanish",
+      "level": "Native"
     },
     {
-      "language": "Inglés",
+      "language": "English",
       "level": "B2"
     }
   ],
@@ -107,7 +107,7 @@
       "link": "https://www.udemy.com/certificate/UC-0b6aab20-cefe-47c9-8797-1b71fe78ea0f/"
     },
     {
-      "title": "React - Guía definitiva",
+      "title": "React - Definitive guide",
       "platform": "Udemy",
       "link": "https://www.udemy.com/certificate/UC-d8bceb59-7bec-4753-95fb-d76276d7832c/"
     }

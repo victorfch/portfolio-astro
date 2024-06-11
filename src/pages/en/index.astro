@@ -1,17 +1,10 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Badge from "../components/Badge.astro";
-import LinkedinIcon from "../icons/Linkedin.astro";
-import GithubIcon from "../icons/Github.astro";
-import MailIcon from "../icons/Mail.astro";
-import Briefcase from "../icons/Briefcase.astro";
-import Code from "../icons/Code.astro";
-import Tool from "../icons/Tool.astro";
-import SocialPill from "../components/SocialPill.astro";
-import Experience from "../components/Experience.astro";
-import Projects from "../components/Projects.astro";
-import School from "../icons/School.astro";
-import Academic from "../components/Academic.astro";
+import Badge from "../../components/Badge.astro";
+import SocialPill from "../../components/SocialPill.astro";
+import Layout from "../../layouts/Layout.astro";
+import LinkedinIcon from "../../icons/Linkedin.astro";
+import GithubIcon from "../../icons/Github.astro";
+import MailIcon from "../../icons/Mail.astro";
 import {
   profile,
   experience,
@@ -19,17 +12,24 @@ import {
   languages,
   certifications,
   education,
-} from "../../cv.json";
-import Skills from "../components/Skills.astro";
-import Language from "../icons/Language.astro";
-import Languages from "../components/Languages.astro";
-import Certificate from "../icons/Certificate.astro";
-import Certifications from "../components/Certifications.astro";
+} from "../../../cv_en.json";
+import Briefcase from "../../icons/Briefcase.astro";
+import Code from "../../icons/Code.astro";
+import Projects from "../../components/Projects.astro";
+import Experience from "../../components/Experience.astro";
+import Language from "../../icons/Language.astro";
+import Languages from "../../components/Languages.astro";
+import Tool from "../../icons/Tool.astro";
+import Skills from "../../components/Skills.astro";
+import Certificate from "../../icons/Certificate.astro";
+import Certifications from "../../components/Certifications.astro";
+import School from "../../icons/School.astro";
+import Academic from "../../components/Academic.astro";
 ---
 
 <Layout
-  title="Portfolio de Víctor - Programador y Desarrollador Web."
-  description="Contrata a Víctor para crear tu aplicación web"
+  title="Víctor's Portfolio - Programmer and Web Developer."
+  description="Hire Victor to build your web application"
 >
   <main class="px-4 mb-10">
     <section class="w-full lg:w-[740px] mx-auto mt-20 lg:mt-40" id="top">
@@ -87,7 +87,7 @@ import Certifications from "../components/Certifications.astro";
         class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
       >
         <Briefcase class="size-8" />
-        Experiencia
+        Experience
       </h2>
       <Experience experience={experience} />
     </section>
@@ -96,7 +96,7 @@ import Certifications from "../components/Certifications.astro";
         class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
       >
         <Code class="size-8" />
-        Proyectos
+        Projects
       </h2>
       <Projects projects={projects} />
     </section>
@@ -105,7 +105,7 @@ import Certifications from "../components/Certifications.astro";
         class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
       >
         <School class="size-8" />
-        Educación
+        Education
       </h2>
       <Academic education={education} />
     </section>
@@ -114,7 +114,7 @@ import Certifications from "../components/Certifications.astro";
         class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
       >
         <Language class="size-8" />
-        Idiomas
+        Languages
       </h2>
 
       <Languages languages={languages} />
@@ -134,7 +134,7 @@ import Certifications from "../components/Certifications.astro";
         class="text-4xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white"
       >
         <Tool class="size-8" />
-        Habilidades
+        Skills
       </h2>
 
       <Skills />

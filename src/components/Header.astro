@@ -1,29 +1,55 @@
 ---
 import Hamburger from "../icons/Hamburger.astro";
-import Moon from "../icons/Moon.astro";
-import Sun from "../icons/Sun.astro";
+import Settings from "../components/Settings.astro";
+
+const ui = {
+  es: {
+    "nav.home": "Inicio",
+    "nav.exp": "Experiencia",
+    "nav.pro": "Proyectos",
+    "nav.edu": "Educación",
+    "nav.lang": "Idiomas",
+  },
+  en: {
+    "nav.home": "Home",
+    "nav.exp": "Experience",
+    "nav.pro": "Projects",
+    "nav.edu": "Education",
+    "nav.lang": "Languages",
+  },
+};
+
+const { pathname } = Astro.url;
+const lang = pathname.split("/")[1];
+
+const t = (key) => {
+  let language = "en";
+  if (lang === "") {
+    language = "es";
+  }
+  return ui[language][key];
+};
 ---
 
 <header
-  class="flex z-10 justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
+  class="flex z-40 justify-center items-center py-5 w-full xl:w-[1120px] mx-auto"
 >
   <nav
-    class="fixed w-full md:w-fit top-0 [backdrop-filter:blur(5px)] bg-white/55 md:bg-transparent animate-none md:animate-appear md:[animation-range:0_200px] md:[animation-timeline:scroll(root)] md:top-3 md:rounded-full opacity-90 text-gray-600 h-0 md:h-max dark:text-gray-800 dark:md:text-white"
+    class="fixed w-full md:w-fit -top-1/3 [backdrop-filter:blur(5px)] bg-white/55 md:bg-transparent animate-none md:animate-appear md:[animation-range:0_200px] md:[animation-timeline:scroll(root)] md:top-3 md:rounded-full opacity-90 text-gray-600 h-0 md:h-max dark:text-gray-800 dark:md:text-white"
     id="navbar"
   >
     <ul
       class="flex flex-col gap-5 absolute md:relative w-full md:w-fit top-1/2 md:top-0 -translate-y-1/2 md:translate-y-0 text-center md:flex-row md:gap-x-5 p-3 font-bold items-center hover:[&>li]:text-cyan-800 dark:hover:[&>li]:text-yellow-400"
     >
-      <li><a href="#top">Inicio</a></li>
+      <li><a href="#top">{t("nav.home")}</a></li>
       <li>
-        <a href="#experience">Experiencia</a>
+        <a href="#experience">{t("nav.exp")}</a>
       </li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#edu">Educación</a></li>
-      <li><a href="#languages">Idiomas</a></li>
-      <li>
-        <Moon id="moon" class="size-5 hidden" />
-        <Sun id="sun" class="size-5 hidden" />
+      <li><a href="#projects">{t("nav.pro")}</a></li>
+      <li><a href="#edu">{t("nav.edu")}</a></li>
+      <li><a href="#languages">{t("nav.lang")}</a></li>
+      <li class="relative">
+        <Settings />
       </li>
     </ul>
   </nav>
@@ -35,12 +61,12 @@ import Sun from "../icons/Sun.astro";
 
 <style>
   nav {
-    overflow: hidden;
     transition: all 0.5s ease-in;
   }
 
   nav.is-open {
     height: 100vh;
+    top: 0;
   }
 
   @keyframes appear {
@@ -57,7 +83,7 @@ import Sun from "../icons/Sun.astro";
     actualMode = "dark";
   }
 
-  const lastLi = document.querySelector("ul li:last-child");
+  const themeBtn = document.querySelector("[data-btn-theme]");
   const sunSVG = document.querySelector("#sun");
   const moonSVG = document.querySelector("#moon");
   const navbar = document.querySelector("#navbar");
@@ -65,12 +91,12 @@ import Sun from "../icons/Sun.astro";
   const icon = btnHam.querySelector("div");
 
   if (actualMode == "dark") {
-    moonSVG.classList.remove("hidden");
-  } else {
     sunSVG.classList.remove("hidden");
+  } else {
+    moonSVG.classList.remove("hidden");
   }
 
-  document.querySelectorAll("nav ul li").forEach((li) => {
+  document.querySelectorAll("nav ul li:not(:last-child)").forEach((li) => {
     li.addEventListener("click", () => {
       document.body.classList.remove("overflow-y-hidden");
       icon.classList.remove("is-open");
@@ -78,15 +104,15 @@ import Sun from "../icons/Sun.astro";
     });
   });
 
-  lastLi.addEventListener("click", () => {
+  themeBtn.addEventListener("click", () => {
     actualMode == "dark" ? (actualMode = "light") : (actualMode = "dark");
 
     if (actualMode == "dark") {
-      moonSVG.classList.remove("hidden");
-      sunSVG.classList.add("hidden");
-    } else {
       moonSVG.classList.add("hidden");
       sunSVG.classList.remove("hidden");
+    } else {
+      moonSVG.classList.remove("hidden");
+      sunSVG.classList.add("hidden");
     }
 
     if (localStorage.getItem("color-theme")) {

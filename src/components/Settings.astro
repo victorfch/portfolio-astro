@@ -1,0 +1,61 @@
+---
+import Moon from "../icons/Moon.astro";
+import SettingsIcon from "../icons/Settings.astro";
+import Sun from "../icons/Sun.astro";
+---
+
+<div id="settings">
+  <button class="btn-toggle-set align-middle">
+    <SettingsIcon class="size-5" />
+  </button>
+  <div
+    data-panel
+    class="absolute hidden rounded z-10 top-8 -right-16 md:right-0 bg-white/90 dark:bg-white/40 md:dark:bg-gray-900/90 min-w-[10rem] shadow-md text-gray-600 dark:text-gray-600 md:dark:text-white"
+  >
+    <ul class="text-left p-1 hover:[&>li]:bg-neutral-400 [&>li]:p-2">
+      <li>
+        <button
+          class="flex flex-row justify-around items-center w-full h-full"
+          data-btn-theme
+        >
+          Theme:
+          <Moon id="moon" class="hidden" />
+          <Sun id="sun" class="hidden" />
+        </button>
+      </li>
+      <li>
+        <a class="w-full h-full flex flex-row justify-around items-center">
+          Language: <span>ES</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  const { pathname } = window.location;
+
+  const btnSet = document.querySelector(".btn-toggle-set");
+  const setPanel = document.querySelector("[data-panel]");
+  const anchor = setPanel.querySelector("a");
+  const langSpan = anchor.querySelector("span");
+
+  if (pathname == "/") {
+    anchor.href = "/en";
+    langSpan.textContent = "EN";
+  } else {
+    anchor.href = "/";
+    langSpan.textContent = "ES";
+  }
+
+  btnSet.addEventListener("click", () => {
+    setPanel.classList.toggle("hidden");
+  });
+
+  document.body.addEventListener("click", ({ target }: any) => {
+    const elem = target.closest("#settings");
+    if (elem == null && !setPanel.classList.contains("hidden")) {
+      setPanel.classList.add("hidden");
+    }
+  });
+</script>
