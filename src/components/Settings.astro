@@ -25,7 +25,8 @@ import Sun from "../icons/Sun.astro";
       </li>
       <li>
         <a class="w-full h-full flex flex-row justify-around items-center">
-          Language: <span>ES</span>
+          <span></span>
+          <span></span>
         </a>
       </li>
     </ul>
@@ -38,13 +39,16 @@ import Sun from "../icons/Sun.astro";
   const btnSet = document.querySelector(".btn-toggle-set");
   const setPanel = document.querySelector("[data-panel]");
   const anchor = setPanel.querySelector("a");
-  const langSpan = anchor.querySelector("span");
+  const langText = anchor.querySelector("span:first-child");
+  const langSpan = anchor.querySelector("span:nth-child(2)");
 
   if (pathname == "/") {
     anchor.href = "/en";
+    langText.textContent = "Idioma:";
     langSpan.textContent = "EN";
   } else {
     anchor.href = "/";
+    langText.textContent = "Language:";
     langSpan.textContent = "ES";
   }
 
